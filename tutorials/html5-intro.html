@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao HTML5 - TutoriaisTech</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <i class="fas fa-graduation-cap"></i>
+                    TutoriaisTech
+                </a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../categorias.html">Categorias</a></li>
+                <li><a href="../sobre.html">Sobre</a></li>
+                <li><a href="../contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="tutorial-content">
+        <article class="tutorial-article">
+            <header class="tutorial-header">
+                <div class="container">
+                    <div class="tutorial-meta">
+                        <span class="category">Desenvolvimento Web</span>
+                        <span class="date">15 de Fevereiro de 2024</span>
+                    </div>
+                    <h1>Introdução ao HTML5: Fundamentos para Iniciantes</h1>
+                    <p class="tutorial-description">
+                        Aprenda os conceitos básicos do HTML5 e comece sua jornada no desenvolvimento web.
+                        Este tutorial aborda a estrutura fundamental, elementos essenciais e boas práticas.
+                    </p>
+                    <div class="tutorial-author">
+                        <img src="../assets/caua.jpeg" alt="Cauã Gouvea" class="author-avatar">
+                        <div class="author-info">
+                            <h3>Cauã Gouvea</h3>
+                            <p>Estudante de Engenharia de Software na Universidade de Vassouras</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <nav class="tutorial-nav">
+                <div class="container">
+                    <div class="tutorial-nav-content">
+                        <button class="back-button" onclick="history.back()">
+                            <i class="fas fa-arrow-left"></i>
+                            Voltar
+                        </button>
+                        <div class="tutorial-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% completo</span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="tutorial-main">
+                <div class="container">
+                    <div class="tutorial-grid">
+                        <aside class="tutorial-sidebar">
+                            <div class="toc-container">
+                                <h2>Sumário</h2>
+                                <nav class="table-of-contents">
+                                    <ul>
+                                        <li><a href="#introducao">1. Introdução</a></li>
+                                        <li><a href="#o-que-e-html5">2. O que é HTML5?</a></li>
+                                        <li><a href="#estrutura-basica">3. Estrutura Básica</a></li>
+                                        <li><a href="#elementos-essenciais">4. Elementos Essenciais</a></li>
+                                        <li><a href="#semantica">5. Semântica HTML5</a></li>
+                                        <li><a href="#formularios">6. Formulários</a></li>
+                                        <li><a href="#conclusao">7. Conclusão</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </aside>
+
+                        <div class="tutorial-body">
+                            <section id="introducao">
+                                <h2>1. Introdução</h2>
+                                <p>
+                                    Bem-vindo ao seu primeiro passo no mundo do desenvolvimento web! O HTML5 é a linguagem
+                                    fundamental para criar páginas web, e este tutorial foi desenvolvido especialmente para
+                                    iniciantes que desejam aprender do zero.
+                                </p>
+                                <p>
+                                    Ao longo deste guia, você aprenderá os conceitos essenciais do HTML5, desde a estrutura
+                                    básica até elementos mais avançados, sempre com exemplos práticos e explicações claras.
+                                </p>
+                            </section>
+
+                            <section id="o-que-e-html5">
+                                <h2>2. O que é HTML5?</h2>
+                                <p>
+                                    HTML5 é a quinta e mais recente versão do HTML (HyperText Markup Language), a linguagem
+                                    padrão para criar e estruturar conteúdo na web. Ela traz várias melhorias em relação
+                                    às versões anteriores, incluindo:
+                                </p>
+                                <ul>
+                                    <li>Melhor suporte para conteúdo multimídia</li>
+                                    <li>Novos elementos semânticos</li>
+                                    <li>APIs para interatividade</li>
+                                    <li>Melhor acessibilidade</li>
+                                    <li>Suporte nativo para áudio e vídeo</li>
+                                </ul>
+                            </section>
+
+                            <section id="estrutura-basica">
+                                <h2>3. Estrutura Básica</h2>
+                                <p>
+                                    Todo documento HTML5 começa com uma estrutura básica. Veja o exemplo abaixo:
+                                </p>
+                                <pre><code class="language-html">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Primeira Página</title>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Esta é minha primeira página HTML5.</p>
+</body>
+</html>
+                                </code></pre>
+                                <p>
+                                    Vamos entender cada parte:
+                                </p>
+                                <ul>
+                                    <li><code>&lt;!DOCTYPE html&gt;</code>: Declara o tipo do documento como HTML5</li>
+                                    <li><code>&lt;html lang="pt-BR"&gt;</code>: Define o idioma do documento</li>
+                                    <li><code>&lt;head&gt;</code>: Contém metadados e configurações</li>
+                                    <li><code>&lt;body&gt;</code>: Contém o conteúdo visível da página</li>
+                                </ul>
+                            </section>
+
+                            <section id="elementos-essenciais">
+                                <h2>4. Elementos Essenciais</h2>
+                                <p>
+                                    O HTML5 possui diversos elementos para estruturar seu conteúdo. Aqui estão os mais
+                                    utilizados:
+                                </p>
+                                <pre><code class="language-html">
+<!-- Títulos -->
+<h1>Título Principal</h1>
+<h2>Subtítulo</h2>
+<h3>Título de Seção</h3>
+
+<!-- Parágrafos e Texto -->
+<p>Este é um parágrafo de texto.</p>
+<strong>Texto em negrito</strong>
+<em>Texto em itálico</em>
+
+<!-- Listas -->
+<ul>
+    <li>Item não ordenado 1</li>
+    <li>Item não ordenado 2</li>
+</ul>
+
+<ol>
+    <li>Item ordenado 1</li>
+    <li>Item ordenado 2</li>
+</ol>
+
+<!-- Links -->
+<a href="https://www.exemplo.com">Link para exemplo</a>
+
+<!-- Imagens -->
+<img src="imagem.jpg" alt="Descrição da imagem">
+                                </code></pre>
+                            </section>
+
+                            <section id="semantica">
+                                <h2>5. Semântica HTML5</h2>
+                                <p>
+                                    A semântica é um aspecto crucial do HTML5. Elementos semânticos tornam seu código
+                                    mais significativo e acessível. Exemplos:
+                                </p>
+                                <pre><code class="language-html">
+<header>
+    <nav>
+        <!-- Menu de navegação -->
+    </nav>
+</header>
+
+<main>
+    <article>
+        <section>
+            <!-- Conteúdo da seção -->
+        </section>
+    </article>
+    
+    <aside>
+        <!-- Conteúdo lateral -->
+    </aside>
+</main>
+
+<footer>
+    <!-- Rodapé -->
+</footer>
+                                </code></pre>
+                            </section>
+
+                            <section id="formularios">
+                                <h2>6. Formulários</h2>
+                                <p>
+                                    Formulários são essenciais para coletar dados dos usuários. HTML5 introduziu novos
+                                    tipos de input e validações:
+                                </p>
+                                <pre><code class="language-html">
+<form action="/enviar" method="POST">
+    <div>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+    </div>
+
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div>
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+    </div>
+
+    <button type="submit">Enviar</button>
+</form>
+                                </code></pre>
+                            </section>
+
+                            <section id="conclusao">
+                                <h2>7. Conclusão</h2>
+                                <p>
+                                    Parabéns por completar este tutorial introdutório ao HTML5! Você agora tem uma base
+                                    sólida para começar a criar suas próprias páginas web. Lembre-se que a prática é
+                                    essencial para o aprendizado.
+                                </p>
+                                <p>
+                                    Nos próximos passos, você pode:
+                                </p>
+                                <ul>
+                                    <li>Explorar mais elementos HTML5</li>
+                                    <li>Aprender CSS para estilizar suas páginas</li>
+                                    <li>Estudar JavaScript para adicionar interatividade</li>
+                                    <li>Praticar criando seus próprios projetos</li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <section class="comments-section">
+            <div class="container">
+                <h2>Comentários</h2>
+                <div class="comments-container">
+                    <p class="no-comments">Seja o primeiro a comentar!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TutoriaisTech</h3>
+                <p>Seu portal de conhecimento em tecnologia</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../categorias.html">Categorias</a></li>
+                    <li><a href="../sobre.html">Sobre</a></li>
+                    <li><a href="../contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TutoriaisTech. Desenvolvido por Cauã Gouvea e Yuri Francisco - Estudantes de Engenharia de Software na Universidade de Vassouras.</p>
+        </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-html.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBar = document.querySelector('.progress');
+            const progressText = document.querySelector('.progress-text');
+            
+            function updateProgress() {
+                const windowHeight = window.innerHeight;
+                const documentHeight = document.documentElement.scrollHeight;
+                const scrollTop = window.scrollY;
+                
+                const progress = (scrollTop / (documentHeight - windowHeight)) * 100;
+                const roundedProgress = Math.round(progress);
+                
+                progressBar.style.width = `${roundedProgress}%`;
+                progressText.textContent = `${roundedProgress}% completo`;
+            }
+            
+            window.addEventListener('scroll', updateProgress);
+            updateProgress();
+        });
+    </script>
+</body>
+</html> 
