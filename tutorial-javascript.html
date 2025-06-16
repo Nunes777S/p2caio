@@ -1,0 +1,282 @@
+html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Básico | DevTutoriais</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="../index.html">DevTutoriais</a></h1>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../categorias.html">Tutoriais</a></li>
+                    <li><a href="../sobre.html">Sobre</a></li>
+                    <li><a href="../contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container tutorial-container">
+        <article class="tutorial-article">
+            <header class="tutorial-header">
+                <span class="tutorial-category">JavaScript</span>
+                <h1>JavaScript Básico para Iniciantes</h1>
+                <div class="tutorial-meta">
+                    <span><i class="far fa-calendar-alt"></i> Publicado em: 20/07/2023</span>
+                    <span><i class="far fa-clock"></i> Tempo de leitura: 15 minutos</span>
+                </div>
+                <img src="https://via.placeholder.com/800x400/f39c12/ffffff?text=JavaScript" alt="JavaScript" class="tutorial-featured-image">
+            </header>
+
+            <aside class="tutorial-summary">
+                <h2><i class="fas fa-list-ul"></i> Neste tutorial você vai aprender:</h2>
+                <ul>
+                    <li>O que é JavaScript e como ele funciona no navegador</li>
+                    <li>Variáveis e tipos de dados em JavaScript</li>
+                    <li>Operadores e estruturas condicionais</li>
+                    <li>Funções e escopo</li>
+                    <li>Manipulação básica do DOM</li>
+                </ul>
+            </aside>
+
+            <div class="tutorial-content">
+                <section>
+                    <h2>Introdução ao JavaScript</h2>
+                    <p>JavaScript é uma linguagem de programação que permite adicionar interatividade às páginas web. Diferente de HTML (estrutura) e CSS (estilo), JavaScript é uma linguagem de programação completa que pode:</p>
+                    
+                    <ul>
+                        <li>Manipular conteúdo HTML dinamicamente</li>
+                        <li>Responder a eventos do usuário</li>
+                        <li>Comunicar-se com servidores (AJAX)</li>
+                        <li>Armazenar dados no navegador</li>
+                        <li>E muito mais!</li>
+                    </ul>
+                    
+                    <h3>Incluindo JavaScript em uma Página</h3>
+                    <p>Assim como o CSS, o JavaScript pode ser incluído de três formas:</p>
+                    
+                    <div class="tutorial-example">
+                        <h4>1. JavaScript Externo (recomendado)</h4>
+                        <pre><code class="language-html">&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+                        
+                        <h4>2. JavaScript Interno</h4>
+                        <pre><code class="language-html">&lt;script&gt;
+    // Código JavaScript aqui
+    alert('Olá, mundo!');
+&lt;/script&gt;</code></pre>
+                        
+                        <h4>3. JavaScript Inline (evitar quando possível)</h4>
+                        <pre><code class="language-html">&lt;button onclick="alert('Clicado!')"&gt;Clique&lt;/button&gt;</code></pre>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Variáveis e Tipos de Dados</h2>
+                    <p>Em JavaScript (ES6+), usamos <code>let</code> e <code>const</code> para declarar variáveis:</p>
+                    
+                    <pre><code class="language-javascript">// Declaração de variáveis
+let nome = 'João';  // String (texto)
+const idade = 30;   // Number (números inteiros ou decimais)
+let ativo = true;   // Boolean (true/false)
+
+// Objetos
+const pessoa = {
+    nome: 'Maria',
+    idade: 25,
+    profissao: 'Desenvolvedora'
+};
+
+// Arrays
+const frutas = ['maçã', 'banana', 'laranja'];</code></pre>
+                    
+                    <h3>Tipos de Dados Principais</h3>
+                    <table class="tutorial-table">
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Descrição</th>
+                                <th>Exemplo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>String</td>
+                                <td>Sequência de caracteres (texto)</td>
+                                <td><code>'Olá'</code>, <code>"Mundo"</code></td>
+                            </tr>
+                            <tr>
+                                <td>Number</td>
+                                <td>Números inteiros ou decimais</td>
+                                <td><code>42</code>, <code>3.14</code></td>
+                            </tr>
+                            <tr>
+                                <td>Boolean</td>
+                                <td>Valores lógicos true/false</td>
+                                <td><code>true</code>, <code>false</code></td>
+                            </tr>
+                            <tr>
+                                <td>Array</td>
+                                <td>Lista ordenada de valores</td>
+                                <td><code>[1, 2, 3]</code></td>
+                            </tr>
+                            <tr>
+                                <td>Object</td>
+                                <td>Coleção de pares chave-valor</td>
+                                <td><code>{nome: 'João', idade: 30}</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section>
+                    <h2>Operadores e Condicionais</h2>
+                    <p>JavaScript possui operadores para realizar operações matemáticas, comparações e lógicas:</p>
+                    
+                    <h3>Operadores Aritméticos</h3>
+                    <pre><code class="language-javascript">let soma = 10 + 5;      // 15
+let subtracao = 10 - 5; // 5
+let multiplicacao = 10 * 5; // 50
+let divisao = 10 / 5;   // 2
+let resto = 10 % 3;     // 1 (resto da divisão)
+</code></pre>
+
+                    <h3>Operadores de Comparação</h3>
+                    <pre><code class="language-javascript">let igual = 5 == '5';    // true (igualdade)
+let estritamenteIgual = 5 === '5'; // false (igualdade estrita)
+let diferente = 5 != '5'; // false
+let maiorQue = 10 > 5;    // true
+let menorOuIgual = 10 <= 10; // true
+</code></pre>
+
+                    <h3>Estruturas Condicionais</h3>
+                    <pre><code class="language-javascript">// if...else
+let hora = 14;
+
+if (hora < 12) {
+    console.log('Bom dia!');
+} else if (hora < 18) {
+    console.log('Boa tarde!');
+} else {
+    console.log('Boa noite!');
+}
+
+// Operador ternário
+let mensagem = hora < 18 ? 'Dia' : 'Noite';
+</code></pre>
+                </section>
+
+                <section>
+                    <h2>Funções</h2>
+                    <p>Funções são blocos de código reutilizáveis que realizam uma tarefa específica.</p>
+                    
+                    <h3>Declarando Funções</h3>
+                    <pre><code class="language-javascript">// Declaração de função
+function saudacao(nome) {
+    return `Olá, ${nome}!`;
+}
+
+// Expressão de função
+const soma = function(a, b) {
+    return a + b;
+};
+
+// Arrow function (ES6+)
+const quadrado = x => x * x;
+</code></pre>
+
+                    <h3>Chamando Funções</h3>
+                    <pre><code class="language-javascript">console.log(saudacao('Maria')); // "Olá, Maria!"
+console.log(soma(2, 3));       // 5
+console.log(quadrado(4));      // 16
+</code></pre>
+                </section>
+
+                <section>
+                    <h2>Manipulação Básica do DOM</h2>
+                    <p>O DOM (Document Object Model) é uma representação do documento HTML que o JavaScript pode manipular.</p>
+                    
+                    <h3>Selecionando Elementos</h3>
+                    <pre><code class="language-javascript">// Seleciona pelo ID
+const titulo = document.getElementById('titulo');
+
+// Seleciona pelo seletor CSS (primeiro elemento)
+const paragrafo = document.querySelector('.destaque');
+
+// Seleciona todos os elementos que correspondem
+const botoes = document.querySelectorAll('button');
+</code></pre>
+
+                    <h3>Modificando Elementos</h3>
+                    <pre><code class="language-javascript">// Alterando conteúdo
+titulo.textContent = 'Novo Título';
+
+// Alterando HTML
+paragrafo.innerHTML = '&lt;strong&gt;Texto em negrito&lt;/strong&gt;';
+
+// Alterando estilos
+titulo.style.color = 'blue';
+titulo.style.fontSize = '24px';
+
+// Adicionando/removendo classes
+paragrafo.classList.add('importante');
+paragrafo.classList.remove('destaque');
+</code></pre>
+
+                    <h3>Eventos</h3>
+                    <pre><code class="language-javascript">// Adicionando um event listener
+const botao = document.querySelector('#meuBotao');
+
+botao.addEventListener('click', function() {
+    alert('Botão clicado!');
+});
+</code></pre>
+                </section>
+
+                <section class="tutorial-conclusion">
+                    <h2>Conclusão</h2>
+                    <p>Neste tutorial você aprendeu os fundamentos do JavaScript, incluindo variáveis, tipos de dados, operadores, funções e manipulação básica do DOM. Com esses conceitos, você já pode começar a adicionar interatividade às suas páginas web.</p>
+                    
+                    <div class="tutorial-next-steps">
+                        <h3>Próximos passos:</h3>
+                        <ul>
+                            <li>Pratique criando pequenos scripts para manipular elementos da página</li>
+                            <li>Explore eventos como mouseover, keypress e submit</li>
+                            <li>Aprenda sobre AJAX para comunicação com servidores</li>
+                            <li>Conheça os novos recursos do ES6+ como classes, promises e async/await</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="tutorial-footer">
+                <a href="javascript:history.back()" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para Tutoriais</a>
+                <div class="tutorial-share">
+                    <span>Compartilhe:</span>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 DevTutoriais. Todos os direitos reservados.</p>
+            <p>Desenvolvido por [Seu Nome] e [Nome do Colega]</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

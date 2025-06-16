@@ -1,0 +1,137 @@
+html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ATUALIZE O TÍTULO ABAIXO -->
+    <title>Título do Tutorial | DevTutoriais</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="../index.html">DevTutoriais</a></h1>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../categorias.html">Tutoriais</a></li>
+                    <li><a href="../sobre.html">Sobre</a></li>
+                    <li><a href="../contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container tutorial-container">
+        <!-- CABEÇALHO DO TUTORIAL -->
+        <article class="tutorial-article">
+            <header class="tutorial-header">
+                <!-- ATUALIZE A CATEGORIA ABAIXO -->
+                <span class="tutorial-category">CATEGORIA</span>
+                <!-- ATUALIZE O TÍTULO ABAIXO -->
+                <h1>Título do Tutorial</h1>
+                <!-- ATUALIZE A DATA ABAIXO -->
+                <div class="tutorial-meta">
+                    <span><i class="far fa-calendar-alt"></i> Publicado em: DD/MM/AAAA</span>
+                    <span><i class="far fa-clock"></i> Tempo de leitura: X minutos</span>
+                </div>
+                <img src="https://via.placeholder.com/800x400" alt="Imagem de destaque do tutorial" class="tutorial-featured-image">
+            </header>
+
+            <!-- SUMÁRIO DO TUTORIAL -->
+            <aside class="tutorial-summary">
+                <h2><i class="fas fa-list-ul"></i> Neste tutorial você vai aprender:</h2>
+                <ul>
+                    <!-- ADICIONE OS TÓPICOS ABAIXO -->
+                    <li>Tópico 1</li>
+                    <li>Tópico 2</li>
+                    <li>Tópico 3</li>
+                    <li>Tópico 4</li>
+                </ul>
+            </aside>
+
+            <!-- CONTEÚDO PRINCIPAL -->
+            <div class="tutorial-content">
+                <!-- SEÇÃO 1 -->
+                <section>
+                    <h2>Introdução</h2>
+                    <p>Este é um template para criar novos tutoriais. Substitua todo o conteúdo entre os comentários pelo seu próprio conteúdo.</p>
+                    <p>Adicione quantas seções forem necessárias, seguindo o modelo abaixo.</p>
+                </section>
+
+                <!-- SEÇÃO 2 -->
+                <section>
+                    <h2>Conceitos Básicos</h2>
+                    <p>Explique os conceitos fundamentais relacionados ao tutorial.</p>
+                    
+                    <h3>Subseção (se necessário)</h3>
+                    <p>Detalhe aspectos específicos do tópico.</p>
+                    
+                    <!-- EXEMPLO DE CÓDIGO -->
+                    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Exemplo de Código&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Este é um exemplo de bloco de código.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </section>
+
+                <!-- SEÇÃO 3 -->
+                <section>
+                    <h2>Exemplo Prático</h2>
+                    <p>Inclua exemplos práticos e demonstrações quando possível.</p>
+                    
+                    <div class="tutorial-example">
+                        <h4>Exemplo:</h4>
+                        <p>Este é um exemplo prático que você pode demonstrar.</p>
+                        <!-- INSIRA AQUI QUALQUER ELEMENTO DE DEMONSTRAÇÃO -->
+                    </div>
+                </section>
+
+                <!-- SEÇÃO FINAL -->
+                <section class="tutorial-conclusion">
+                    <h2>Conclusão</h2>
+                    <p>Resuma os pontos principais abordados no tutorial e indique os próximos passos para o aprendizado.</p>
+                    
+                    <div class="tutorial-next-steps">
+                        <h3>Próximos passos:</h3>
+                        <ul>
+                            <li>Prática os conceitos aprendidos</li>
+                            <li>Explore a documentação oficial</li>
+                            <li>Experimente variações dos exemplos</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- RODAPÉ DO TUTORIAL -->
+            <footer class="tutorial-footer">
+                <a href="javascript:history.back()" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para Tutoriais</a>
+                <div class="tutorial-share">
+                    <span>Compartilhe:</span>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 DevTutoriais. Todos os direitos reservados.</p>
+            <p>Desenvolvido por [Seu Nome] e [Nome do Colega]</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

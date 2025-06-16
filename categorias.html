@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categorias - TutoriaisTech</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav-container">
+      <div class="logo">
+        <a href="index.html">
+          <i class="fas fa-graduation-cap"></i>
+          TutoriaisTech
+        </a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categorias.html" class="active">Categorias</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="search-section">
+      <div class="container">
+        <h1>Explore Nossos Tutoriais</h1>
+        <div class="search-container">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input 
+              type="text" 
+              class="search-input"
+              placeholder="Busque por título, categoria ou descrição..."
+              aria-label="Buscar tutoriais"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="filters">
+      <div class="container">
+        <h2>Filtrar por Categoria</h2>
+        <div class="category-filters">
+          <button class="filter-btn category-filter active" data-category="todos">Todos</button>
+          <button class="filter-btn category-filter" data-category="Desenvolvimento Web">Web</button>
+          <button class="filter-btn category-filter" data-category="Frameworks">Frameworks</button>
+          <button class="filter-btn category-filter" data-category="Backend">Backend</button>
+        </div>
+      </div>
+    </section>
+    <section class="tutorials-section">
+      <div class="container">
+        <div class="tutorials-grid">
+          <!-- Os tutoriais serão renderizados via JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>TutoriaisTech</h3>
+        <p>Seu portal de conhecimento em tecnologia</p>
+      </div>
+      <div class="footer-section">
+        <h3>Links Rápidos</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categorias.html">Categorias</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Redes Sociais</h3>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 TutoriaisTech. Desenvolvido por Cauã Gouvea e Yuri Francisco - Estudantes de Engenharia de Software na Universidade de Vassouras.</p>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html> 

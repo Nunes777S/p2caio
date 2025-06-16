@@ -1,0 +1,218 @@
+html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 e CSS3 Básico | DevTutoriais</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="../index.html">DevTutoriais</a></h1>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../categorias.html">Tutoriais</a></li>
+                    <li><a href="../sobre.html">Sobre</a></li>
+                    <li><a href="../contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container tutorial-container">
+        <article class="tutorial-article">
+            <header class="tutorial-header">
+                <span class="tutorial-category">HTML & CSS</span>
+                <h1>Introdução ao HTML5 e CSS3 para Iniciantes</h1>
+                <div class="tutorial-meta">
+                    <span><i class="far fa-calendar-alt"></i> Publicado em: 15/06/2023</span>
+                    <span><i class="far fa-clock"></i> Tempo de leitura: 12 minutos</span>
+                </div>
+                <img src="https://via.placeholder.com/800x400/3498db/ffffff?text=HTML5+CSS3" alt="HTML5 e CSS3" class="tutorial-featured-image">
+            </header>
+
+            <aside class="tutorial-summary">
+                <h2><i class="fas fa-list-ul"></i> Neste tutorial você vai aprender:</h2>
+                <ul>
+                    <li>A estrutura básica de um documento HTML5</li>
+                    <li>Principais tags HTML e sua semântica</li>
+                    <li>Como vincular CSS ao HTML</li>
+                    <li>Seletores CSS básicos e propriedades comuns</li>
+                    <li>Criar uma página simples com estilo</li>
+                </ul>
+            </aside>
+
+            <div class="tutorial-content">
+                <section>
+                    <h2>O que é HTML?</h2>
+                    <p>HTML (HyperText Markup Language) é a linguagem de marcação padrão para criar páginas web. Ele define a estrutura e o conteúdo de uma página através de elementos (tags) que envolvem diferentes partes do conteúdo.</p>
+                    
+                    <h3>Estrutura Básica de um Documento HTML5</h3>
+                    <p>Todo documento HTML5 possui uma estrutura mínima necessária:</p>
+                    
+                    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Título da Página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Conteúdo da página vai aqui --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </section>
+
+                <section>
+                    <h2>Principais Tags HTML</h2>
+                    <p>HTML5 introduziu elementos semânticos que ajudam a descrever melhor o conteúdo:</p>
+                    
+                    <ul>
+                        <li><code>&lt;header&gt;</code> - Cabeçalho da página ou seção</li>
+                        <li><code>&lt;nav&gt;</code> - Navegação principal</li>
+                        <li><code>&lt;main&gt;</code> - Conteúdo principal</li>
+                        <li><code>&lt;section&gt;</code> - Seção temática do documento</li>
+                        <li><code>&lt;article&gt;</code> - Conteúdo independente e auto-contido</li>
+                        <li><code>&lt;footer&gt;</code> - Rodapé da página ou seção</li>
+                    </ul>
+                    
+                    <h3>Exemplo de Uso</h3>
+                    <pre><code class="language-html">&lt;header&gt;
+    &lt;h1&gt;Meu Site&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;article&gt;
+        &lt;h2&gt;Título do Artigo&lt;/h2&gt;
+        &lt;p&gt;Conteúdo do artigo...&lt;/p&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;&copy; 2023 Meu Site&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+                </section>
+
+                <section>
+                    <h2>Introdução ao CSS3</h2>
+                    <p>CSS (Cascading Style Sheets) é usado para estilizar elementos HTML. Ele permite controlar layout, cores, fontes e outros aspectos visuais.</p>
+                    
+                    <h3>Vinculando CSS ao HTML</h3>
+                    <p>Existem três formas de adicionar CSS:</p>
+                    
+                    <div class="tutorial-example">
+                        <h4>1. CSS Externo (recomendado)</h4>
+                        <pre><code class="language-html">&lt;link rel="stylesheet" href="estilos.css"&gt;</code></pre>
+                        
+                        <h4>2. CSS Interno</h4>
+                        <pre><code class="language-html">&lt;style&gt;
+    body {
+        font-family: Arial, sans-serif;
+    }
+&lt;/style&gt;</code></pre>
+                        
+                        <h4>3. CSS Inline (evitar quando possível)</h4>
+                        <pre><code class="language-html">&lt;p style="color: red;"&gt;Texto vermelho&lt;/p&gt;</code></pre>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Seletores CSS Básicos</h2>
+                    <p>Seletores permitem direcionar elementos HTML para estilização:</p>
+                    
+                    <table class="tutorial-table">
+                        <thead>
+                            <tr>
+                                <th>Seletor</th>
+                                <th>Exemplo</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Seletor de elemento</td>
+                                <td><code>p</code></td>
+                                <td>Seleciona todos os elementos &lt;p&gt;</td>
+                            </tr>
+                            <tr>
+                                <td>Seletor de classe</td>
+                                <td><code>.destaque</code></td>
+                                <td>Seleciona elementos com class="destaque"</td>
+                            </tr>
+                            <tr>
+                                <td>Seletor de ID</td>
+                                <td><code>#header</code></td>
+                                <td>Seleciona o elemento com id="header"</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <h3>Propriedades CSS Comuns</h3>
+                    <pre><code class="language-css">body {
+    font-family: 'Arial', sans-serif;  /* Define a fonte */
+    line-height: 1.6;                 /* Espaçamento entre linhas */
+    color: #333;                      /* Cor do texto */
+    margin: 0;                        /* Remove margens padrão */
+}
+
+h1, h2, h3 {
+    color: #0066cc;                   /* Cor para títulos */
+}
+
+.destaque {
+    background-color: #ffffcc;        /* Fundo amarelo claro */
+    padding: 15px;                    /* Espaçamento interno */
+    border-left: 4px solid #ffcc00;   /* Borda lateral */
+}</code></pre>
+                </section>
+
+                <section class="tutorial-conclusion">
+                    <h2>Conclusão</h2>
+                    <p>Neste tutorial você aprendeu os fundamentos de HTML5 e CSS3, incluindo a estrutura básica de um documento HTML, elementos semânticos, como vincular CSS e conceitos básicos de estilização.</p>
+                    
+                    <div class="tutorial-next-steps">
+                        <h3>Próximos passos:</h3>
+                        <ul>
+                            <li>Pratique criando uma página simples com os conceitos aprendidos</li>
+                            <li>Explore mais propriedades CSS como <code>display</code>, <code>position</code> e <code>flexbox</code></li>
+                            <li>Consulte a documentação MDN para referência completa</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="tutorial-footer">
+                <a href="javascript:history.back()" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar para Tutoriais</a>
+                <div class="tutorial-share">
+                    <span>Compartilhe:</span>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 DevTutoriais. Todos os direitos reservados.</p>
+            <p>Desenvolvido por [Seu Nome] e [Nome do Colega]</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
